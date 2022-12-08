@@ -14,6 +14,8 @@ body{
 main{
     display: flex;
     width: 100%;
+    height: 100vh;
+    min-height: 800px;
 }
 
 .container{
@@ -23,7 +25,7 @@ main{
 .left-navigation {
     background-image: url(../images/home/nav_background.jpg);
     width: 240px;
-    height: 100vh;
+    height: 100%;
     min-width: 240px;
     max-width: 240px;
     font-size: 1.2em;
@@ -37,7 +39,7 @@ main{
     background-repeat: no-repeat;
     background-position: center center;
     padding: 24px;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .left-navigation::after {
@@ -61,6 +63,7 @@ main{
 
 .left-navigation .nav-item, .left-navigation .category{
     font-size: 20px;
+    text-size-adjust: none;
 }
 
 .left-navigation .logo{
@@ -80,15 +83,23 @@ main{
     height: 52px;
     min-height: 52px;
     max-height: 52px;
+    width: 192px;
+    height: 52px;
 }
 
 .left-navigation .nav-item i{
-    width: 24px;
-    height: 24px;
-    line-height: 24px;
-    min-height: 24px;
+    font-size: 22px;
+    width: 23px;
+    height: 23px;
+    line-height: 23px;
+    min-height: 23px;
     align-items: center;
     text-align: center;
+    transform: translateY(2px);
+    -webkit-transform: translateY(2px);
+    -moz-transform: translateY(2px);
+    -ms-transform: translateY(2px);
+    -o-transform: translateY(2px);
 }
 
 .left-navigation .active{
