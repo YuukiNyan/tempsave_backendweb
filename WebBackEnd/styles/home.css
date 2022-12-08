@@ -23,9 +23,9 @@ main{
 .left-navigation {
     background-image: url(../images/home/nav_background.jpg);
     width: 240px;
+    height: 100vh;
     min-width: 240px;
     max-width: 240px;
-    height: 100vh;
     font-size: 1.2em;
     flex-shrink: 0;
     -webkit-transition: all 0.3s;
