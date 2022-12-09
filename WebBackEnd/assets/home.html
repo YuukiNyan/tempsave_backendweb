@@ -60,6 +60,7 @@
                     <div class="nav-opener">
                         <i class='bx bx-menu'></i>
                     </div>
+                    <input type="text" name="search-txt-box" id="search-txt-box" class="search-txt-box" placeholder=" ">
                     <div class="search-box">
                         <i class='bx bx-search'></i>
                     </div>
@@ -86,5 +87,19 @@
             </div>
         </div>
     </main>
+    <script>
+        $(document).ready(function(){
+            $(".search-box").click(function(){
+                $(this).animate({
+                    marginLeft: '4px'
+                }, 300);
+                $('#search-txt-box').animate({
+                    marginLeft: '20px',
+                    opacity: 1,
+                    width: 220,
+                }, 300);
+            });
+        });
+    </script>
 </body>
 </html>
