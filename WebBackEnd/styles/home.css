@@ -13,9 +13,11 @@ body{
 
 main{
     display: flex;
-    width: 100%;
-    height: 100vh;
+    width: calc(100% - 12px);
+    height: calc(100vh - 8px);
     min-height: 800px;
+    
+    margin: 4px;
 }
 
 .container{
@@ -40,6 +42,12 @@ main{
     background-position: center center;
     padding: 24px;
     overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
 .left-navigation::after {
@@ -134,7 +142,7 @@ main{
 }
 
 .left-navigation a.nav-item:not(.active):hover::after{
-    width: 192px;
+    width: 200px;
 }
 
 .left-navigation .category{
@@ -156,12 +164,129 @@ main{
     background-color: white;
 } */
 
+/* Container */
+.container{
+    width: 100%;
+    margin-left: 4px;
+}
+
 /* Top bar */
 .top-bar{
     width: 100%;
-    height: 50px;
+    height: 60px;
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content:space-between;
+    padding: 0 10px;
 }
+
+.top-bar *{
+    text-align: center;
+    align-items: center;
+}
+
+.top-bar .topbar-left{
+    display: flex;
+    height: 100%;
+}
+
+.top-bar .topbar-right{
+    display: flex;
+    height: 100%;
+}
+
+.top-bar i.bx-menu{
+    font-size: 40px;
+    color: gray;
+}
+
+.top-bar i:not(.bx-menu){
+    font-size: 32px;
+    color: gray;
+}
+
+.top-bar i{
+    
+}
+
+.user-avatar{
+    display: block;
+    height: 42px;
+    width: 42px;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.4);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    line-height: 50px;
+    margin: auto 0;
+}
+
+.user-info{
+    display: flex;
+    height: calc(100% - 8px);
+    padding: 0 8px;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transition: all ease-out 0.2s;
+    -webkit-transition: all ease-out 0.2s;
+    -moz-transition: all ease-out 0.2s;
+    -ms-transition: all ease-out 0.2s;
+    -o-transition: all ease-out 0.2s;
+}
+
+
+.info-content{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    margin-left: 12px;
+}
+
+.info-content *{
+    height: 50%;
+}
+
+.info-content .user-name{
+    padding-top: 12px;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+.info-content .user-position{
+    /* padding-top: 10px; */
+    font-size: 13px;
+    padding-top: 4px;
+}
+
+/* Adjust position for top bar elements */
+.top-bar .search-box{
+    margin-left: 12px;
+}
+
+.top-bar .messages, .notify{
+    margin-right: 12px;
+}
+
+/* Add effect for top bar elements */
+
+/* Hover Effect */
+.user-info:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.9);
+}
+
 
 
 
