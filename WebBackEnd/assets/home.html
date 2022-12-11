@@ -8,15 +8,18 @@
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
     <main>
-        <nav class="left-navigation">
-            <h1><a href="home.html" class="logo">Tên <span>Trang Web Or Logo</span></a></h1>
+        <nav class="left-navigation expand">
+            <a href="home.html" class="logo">
+
+            </a>
             <a href="home/dashboard.html" class="nav-item active">
                 <i class='bx bxs-dashboard' ></i>
-                Dashboard
+                <span>Dashboard</span>
             </a>
             <div class="category">
                 Manage
@@ -25,33 +28,33 @@
             <div></div>
             <a href="home/customer.html" class="nav-item">
                 <i class='bx bxs-user'></i>
-                Customer
+                <span>Customer</span>
             </a>
             <a href="home/travel.html" class="nav-item">
                 <i class='bx bx-bus' ></i>
-                Travel Tour
+                <span>Travel Tour</span>
             </a>
             <a href="home/news" class="nav-item">
                 <i class='bx bx-news' ></i>
-                News
+                <span>News</span>
             </a>
             <a href="home/discount" class="nav-item">
                 <i class='bx bxs-discount' ></i>
-                Discount
+                <span>Discount</span>
             </a>
             <div class="category">
-                Report
+                <span>Report</span>
             </div>
             <a href="home/sales" class="nav-item">
                 <i class='bx bx-cart-alt' ></i>
-                Sales
+                <span>Sales</span>
             </a>
             <a href="home/traffic" class="nav-item">
                 <i class='bx bx-traffic-cone' ></i>
-                Traffic
+                <span>Traffic</span>
             </a>
             <a href="https://genshin.hoyoverse.com/vi/" class="nav-item">
-                Genshin
+                <span>Genshin</span>
             </a>
         </nav>
         <div class="container">
@@ -89,6 +92,30 @@
     </main>
     <script>
         $(document).ready(function(){
+            var navExpandState = true;
+            //Expand/Collapse navigation animation
+            $(".nav-opener").click(function(){
+                if(navExpandState){
+                    $('.left-navigation.expand').removeClass('expand').addClass('collapse');
+                    navExpandState = false;
+                }
+                else{
+                    $('.left-navigation.collapse').removeClass('collapse').addClass('expand');
+                    navExpandState = true;
+                }
+            });
+            // Expanding navigation when hover
+            $(".left-navigation").hover(function(){
+                if(!navExpandState){
+                    $('.left-navigation.collapse').removeClass('collapse').addClass('expand');
+                }
+            });
+            $(".left-navigation").mouseleave(function(){
+                if(!navExpandState){
+                    $('.left-navigation.expand').removeClass('expand').addClass('collapse');
+                }
+            });
+            // Expand Search Box Animation
             $(".search-box").click(function(){
                 $(this).animate({
                     marginLeft: '4px'
