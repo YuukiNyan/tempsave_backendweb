@@ -16,7 +16,6 @@ main{
     width: calc(100% - 12px);
     height: calc(100vh - 8px);
     min-height: 800px;
-    min-width: 800px;
     margin: 4px;
 }
 
@@ -72,6 +71,10 @@ main{
 .left-navigation.collapse a span{
     transition: all ease 0.3s;
     opacity: 0;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
 }
 
 .left-navigation.collapse a span{
@@ -79,7 +82,7 @@ main{
 }
 
 .left-navigation.collapse .category{
-    visibility: collapse;
+    opacity: 0;
 }
 
 .left-navigation::after {
@@ -216,11 +219,17 @@ main{
     width: 200px;
 }
 
-.left-navigation .category{
+.left-navigation .category p{
     padding-top: 20px;
     padding-bottom: 4px;
     font-weight: bold;
-    color: rgb(0, 0, 0, 0.9);
+    color: rgb(247, 247, 247);
+    text-shadow: 2px 1px 2px black;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+    -ms-transition: all ease 0.3s;
+    -o-transition: all ease 0.3s;
 }
 
 
@@ -399,9 +408,9 @@ main{
 }
 
 /* Adjust position for top bar elements */
-.top-bar .search-box{
+/* .top-bar .search-box{
     
-}
+} */
 
 .top-bar .messages, .notify{
     margin-right: 12px;
@@ -417,6 +426,49 @@ main{
 
 .top-bar i:hover{
     background-color: rgba(0, 0, 0, 0.1);
+}
+
+
+/* #### Mobile Phones Portrait #### */
+@media screen and (max-device-width: 480px) and (orientation: portrait){
+    /* some CSS here */
+}
+  
+  /* #### Mobile Phones Landscape #### */
+  @media screen and (max-device-width: 640px) and (orientation: landscape){
+    /* some CSS here */
+}
+  
+  /* #### Mobile Phones Portrait or Landscape #### */
+  @media screen and (max-device-width: 640px){
+    /* some CSS here */
+}
+  
+  /* #### iPhone 4+ Portrait or Landscape #### */
+  @media screen and (min-device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+    /* some CSS here */
+}
+  
+  /* #### iPhone 5 Portrait or Landscape #### */
+  @media (device-height: 568px) and (device-width: 320px) and (-webkit-min-device-pixel-ratio: 2){
+    /* some CSS here */
+}
+  
+  /* #### iPhone 6 and 6 plus Portrait or Landscape #### */
+  @media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
+    /* some CSS here */
+}
+  
+  /* #### Tablets Portrait or Landscape #### */
+  @media screen and (max-width: 768px){
+    main{
+        display: block;
+    }
+}
+  
+  /* #### Desktops #### */
+  @media screen and (min-width: 1024px){
+    /* some CSS here */
 }
 
 

@@ -22,7 +22,7 @@
                 <span>Dashboard</span>
             </a>
             <div class="category">
-                Manage
+                <p>Manage</p>
                 <div class="catagory-separator"></div>
             </div>
             <div></div>
@@ -43,7 +43,7 @@
                 <span>Discount</span>
             </a>
             <div class="category">
-                <span>Report</span>
+                <p>Report</span>
             </div>
             <a href="home/sales" class="nav-item">
                 <i class='bx bx-cart-alt' ></i>
@@ -125,6 +125,12 @@
                     opacity: 1,
                     width: 220,
                 }, 300);
+            });
+            $(".messages i, .notify i").click(function (){
+                $(this).css({
+                    "color": "rgba(174,120,197)",
+                    "background-color": "rgba(0, 0, 0, 0.05)"
+                });
             });
         });
     </script>
