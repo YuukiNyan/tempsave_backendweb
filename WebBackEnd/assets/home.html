@@ -56,6 +56,9 @@
                 <span>Genshin</span>
             </a>
         </nav>
+        <div class="content-reponsive">
+            Content Reponsive
+        </div>
         <div class="container">
             <div class="top-bar">
                 <div class="topbar-left">
@@ -85,7 +88,7 @@
                 </div>
             </div>
             <div class="content">
-                This is main content
+                <header></header>
             </div>
         </div>
     </main>
@@ -124,6 +127,7 @@
                     opacity: 1,
                     width: 220,
                 }, 300);
+                $('#search-txt-box').focus();
             });
             $(".messages i, .notify i").click(function (){
                 $(this).css({

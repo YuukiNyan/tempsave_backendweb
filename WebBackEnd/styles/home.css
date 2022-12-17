@@ -43,6 +43,10 @@ main{
     box-shadow: 1px 0px 10px rgba(0, 0, 0, 0.2);
 }
 
+.content-reponsive{
+    display: none;
+}
+
 .left-navigation.expand{
     width: 240px;
     height: 100%;
@@ -428,6 +432,8 @@ main{
     background-color: rgba(0, 0, 0, 0.1);
 }
 
+content
+
 
 /* #### Mobile Phones Portrait #### */
 @media screen and (max-device-width: 480px) and (orientation: portrait){
@@ -435,10 +441,11 @@ main{
 }
 
   
-  /* #### Tablets Portrait or Landscape #### */
-  @media screen and (max-width: 768px){
+/* #### Tablets Portrait or Landscape #### */
+@media screen and (max-width: 768px){
     main{
-        display: block;
+        display: flex;
+        flex-direction: column;
     }
     .left-navigation.expand{
         width: 100%;
@@ -446,7 +453,7 @@ main{
         display: inline-flex;
         max-width: 100%;
         min-width: none;
-        overflow: auto;
+        overflow: hidden;
         padding: 0;
         flex-flow: row wrap;
         gap: 12px;
@@ -458,8 +465,7 @@ main{
         -ms-transform: translateX(4px);
         -o-transform: translateX(4px);
         padding: 6px 0 0 4px;
-
-}
+    }
 
     .left-navigation .logo{
         background-color: rgba(177, 221, 236, 0.573);
@@ -469,6 +475,7 @@ main{
     .left-navigation.expand .category{
         display: none;
     }
+
     .left-navigation.expand .nav-item{
         width: fit-content;
         height: 18px;
@@ -477,7 +484,7 @@ main{
         margin: 0;
         padding: 0;
         min-height: 18px;
-}
+    }
 
     .left-navigation.expand .nav-item i{
         display: none;
@@ -488,15 +495,32 @@ main{
         position: static;
         font-size: 16px;
     }
+
     .left-navigation.expand a.nav-item:not(.active):hover::after{
         width: 0;
     }
+
     .left-navigation.expand a.nav-item:not(.active):hover{
         padding-left: 18px;
     }
+
     .left-navigation.expand a.nav-item:not(.active):hover{
         color: white;
         padding-left: 0px;
+    }
+
+    .left-navigation{
+        order: 1;
+    }
+    .content{
+        display: none;
+    }
+    .top-bar{
+        margin-bottom: 10px;
+    }
+    .content-reponsive{
+        display: block;
+        order: 2;
     }
 }
   
