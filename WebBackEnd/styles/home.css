@@ -432,7 +432,7 @@ main{
     background-color: rgba(0, 0, 0, 0.1);
 }
 
-content
+
 
 
 /* #### Mobile Phones Portrait #### */
@@ -521,6 +521,15 @@ content
     .content-reponsive{
         display: block;
         order: 2;
+    }
+    .nav-opener{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 540px){
+    .search-txt-box{
+        max-width: 160px;
     }
 }
   
