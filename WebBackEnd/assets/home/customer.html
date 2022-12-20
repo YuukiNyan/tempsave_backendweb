@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý du lịch</title>
     <link rel="stylesheet" href="../../styles/home.css">
+    <link rel="stylesheet" href="../../styles/customer.css">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -52,9 +53,6 @@
                 <i class='bx bx-traffic-cone' ></i>
                 <span>Traffic</span>
             </a>
-            <a href="https://genshin.hoyoverse.com/vi/" class="nav-item">
-                <span>Genshin</span>
-            </a>
         </nav>
         <div class="content-reponsive">
             Content Reponsive
@@ -80,22 +78,167 @@
                     <div class="user-info">
                         <img src="https://scontent.fsgn19-1.fna.fbcdn.net/v/t1.6435-9/126026719_102585028354979_3101447414743617268_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=8bfeb9&_nc_ohc=d5dOQ67nqSQAX_LLra7&_nc_ht=scontent.fsgn19-1.fna&oh=00_AfCuwcCCDjQhhwU4Cjgc0TPmHxR0gfEkoj__DmdYS1M8HQ&oe=63BAC1EF" alt=""
                         class="user-avatar">
-                        <div class="info-content">
-                            <p class="user-name">Meow</p>
-                            <p class="user-position">Admin</p>
-                        </div>
                     </div>
                 </div>
             </div>
             <div class="content">
                 <header>
-                    
+                    <h2>User Manage</h2>
+                    <input onclick="openForm()" type="button" value="Add User" id="add-user-btn">
                 </header>
-                <form action=""></form>
+                <div class="user-list">
+                    <div class="title-wrapper">
+                        <h3 class="user-list-title">User List</h3>
+                        <div class="user-search">
+                            <input type="text" id="search-user-txt" placeholder="Search content here...">
+                            <input type="button" value="Search" id="search-user-btn">
+                        </div>
+                    </div>
+                    
+                    <table>
+                        <tr class="table-header">
+                            <th>Id</th>
+                            <th>Username</th>
+                            <th>Email</th>
+                            <th>Phone</th>
+                            <th>Country</th>
+                            <th>Join date</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                            <td>user1</td>
+                            <td>John</td>
+                            <td>john123@gmail.com</td>
+                            <td>0123456789</td>
+                            <td>America</td>
+                            <td>22/10/2021</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>user1</td>
+                            <td>John</td>
+                            <td>john123@gmail.com</td>
+                            <td>0123456789</td>
+                            <td>America</td>
+                            <td>22/10/2021</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>user1</td>
+                            <td>John</td>
+                            <td>john123@gmail.com</td>
+                            <td>0123456789</td>
+                            <td>America</td>
+                            <td>22/10/2021</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>user1</td>
+                            <td>John</td>
+                            <td>john123@gmail.com</td>
+                            <td>0123456789</td>
+                            <td>America</td>
+                            <td>22/10/2021</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>user1</td>
+                            <td>John</td>
+                            <td>john123@gmail.com</td>
+                            <td>0123456789</td>
+                            <td>America</td>
+                            <td>22/10/2021</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>user1</td>
+                            <td>John</td>
+                            <td>john123@gmail.com</td>
+                            <td>0123456789</td>
+                            <td>America</td>
+                            <td>22/10/2021</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>user1</td>
+                            <td>John</td>
+                            <td>john123@gmail.com</td>
+                            <td>0123456789</td>
+                            <td>America</td>
+                            <td>22/10/2021</td>
+                            <td>Active</td>
+                        </tr>
+                        <tr>
+                            <td>user1</td>
+                            <td>John</td>
+                            <td>john123@gmail.com</td>
+                            <td>0123456789</td>
+                            <td>America</td>
+                            <td>22/10/2021</td>
+                            <td>Active</td>
+                        </tr>
+                        
+                    </table>
+                </div>
+                <div class="add-new-user-form">
+                    <div class="main-form">
+                        <h2 class="form-header">Add New User</h2>
+                        <div class="form-content">
+                            <div class="input-field">
+                                <input type="text" name="meow" id="meow" class="text-input" required="required">
+                                <span class="text-input-title" for="meow">Username</span>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="meow" id="meow" class="text-input" required="required">
+                                <span class="text-input-title" for="meow">Firstname</span>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="meow" id="meow" class="text-input" required="required">
+                                <span class="text-input-title" for="meow">Lastname</span>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="meow" id="meow" class="text-input" required="required">
+                                <span class="text-input-title" for="meow">Address</span>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="meow" id="meow" class="text-input" required="required">
+                                <span class="text-input-title" for="meow">Phone Number</span>
+                            </div>
+                            <div class="input-field">
+                                <input type="password" name="meow" id="meow" class="text-input" required="required">
+                                <span class="text-input-title" for="meow">Password</span>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="meow" id="meow" class="text-input" required="required">
+                                <span class="text-input-title" for="meow">Email</span>
+                            </div>
+                            <div class="input-field">
+                                <input type="text" name="meow" id="meow" class="text-input" required="required">
+                                <span class="text-input-title" for="meow">Role</span>
+                            </div>
+                        </div>
+                        <div class="control-group">
+                            <input onclick="AddUser()" type="button" value="Add" id="add-user-btn">
+                            <input onclick="CancelAdd()" type="button" value="Cancel" id="cancel-add-user-btn">
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
     <script>
+        function openForm(){
+            var form = $('.add-new-user-form')[0];
+            form.style.display = "block";
+        }
+        function AddUser(){
+            alert("Add new user successfully!");
+            var form = $('.add-new-user-form')[0];
+            form.style.display = "none";
+        }function CancelAdd(){
+            var form = $('.add-new-user-form')[0];
+            form.style.display = "none";
+        }
         $(document).ready(function(){
             var navExpandState = true;
             //Expand/Collapse navigation animation
