@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quản lý du lịch</title>
+    <link rel="icon" type="image/x-icon" href="../images/home/favicon-16x16.png">
     <link rel="stylesheet" href="../styles/home.css">
     <link rel="stylesheet" href="../styles/dashboard.css">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
@@ -178,11 +179,16 @@
                     </div>
                 </div>
                 <div class="chart-analyze">
+                    
                     <div class="chart-bar">
-                        <h2 class="chart-header">Site Visits</>
-                        <canvas id="myChart" style="max-width: 800px; display:block; position:static"></canvas>
+                        <h2 class="chart-header">Top 8 visited countries</h2>
+                        <canvas id="barChart" style="max-width: 600px; min-width:600px; display:block; position:static"></canvas>
                     </div>
-                   
+                    <div class="chart-pie">
+                        <canvas id="pieChart" style="max-width: 100%; min-width:300px; height:80%; min-height: 300px; display:block; position:static"></canvas>
+                        <h2 class="chart-header">Devices</h2>
+                    </div>
+
                     <script>
                         const labels = ["Thailand", "Vietnamese", "American", "France", "Philippines", "Japan", "Korean", "Indonesia"];
                         const data = {
@@ -213,7 +219,7 @@
                             }]
                           };
                         
-                        new Chart("myChart", {
+                        new Chart("barChart", {
                             type: 'bar',
                             data: data,
                             options: {
@@ -234,7 +240,31 @@
                                 }
                               },
                         });
-                        </script>
+                    </script>
+                    <script>
+                        const data_pie = {
+                            labels: [
+                                'Desktops',
+                                'Laptops',
+                                'Tablets',
+                                'Other'
+                            ],
+                            datasets: [{
+                                label: 'Devices Accessed',
+                                data: [300, 280, 100, 50],
+                                backgroundColor: [
+                                'rgb(255, 99, 132)',
+                                'rgb(54, 162, 235)',
+                                'rgb(255, 205, 86)'
+                                ],
+                                hoverOffset: 4
+                            }]
+                        };
+                        new Chart("pieChart", {
+                            type: 'doughnut',
+                            data: data_pie,
+                        });
+                    </script>
                 </div>
                 
             </div>
@@ -285,7 +315,6 @@
             });
             $(".content-reponsive")[0].innerHTML = $(".content")[0].innerHTML;
         });
-        
     </script>
 </body>
 </html>
