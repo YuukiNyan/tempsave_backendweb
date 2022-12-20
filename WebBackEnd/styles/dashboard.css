@@ -1,0 +1,101 @@
+.content{
+    padding: 50px 50px;
+    height: 100%;
+}
+
+.statics{
+    display: flex;
+    height: 128px;
+    justify-content: space-around;
+    flex-flow: row wrap;
+    gap: 30px;
+}
+
+.statics .summarycard{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100%;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.0625) !important;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+    padding: 14px 18px;
+    background-color: white;
+}
+
+.card-content{
+    width: 100%;
+}
+
+.wrapper{
+    display: flex;
+    margin-bottom: 16px;
+}
+
+.summarycard .card-content .card-title{
+    font-size: 18px;
+    font-weight: bolder;
+    color: #8898aa!important;
+    margin-bottom: 16px;
+}
+
+.summarycard .card-content .value{
+    font-size: 22px;
+    font-weight: bolder;
+    color: #32325d;
+}
+
+.summarycard .card-content i{
+    height: 26px;
+    align-items: center;
+    text-align: center;
+    line-height: 26px;
+    transform: translateX(-4px) translateY(1px);
+    -webkit-transform: translateX(-4px) translateY(1px);
+    -moz-transform: translateX(-4px) translateY(1px);
+    -ms-transform: translateX(-4px) translateY(1px);
+    -o-transform: translateX(-4px) translateY(1px);
+}
+
+.summarycard .compare{
+    font-weight: 300;
+    color: #525f7f;
+}
+
+.summarycard .compare *:not(span){
+    line-height: 26px;
+}
+
+.summarycard .compare .color-increase{
+    display: inline-block;
+    color: white;
+    background-color: #2dce89!important;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+
+.summarycard .compare .color-decrease{
+    display: inline-block;
+    color: white;
+    background-color: coral!important;
+    background-color: black;
+    text-align: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}

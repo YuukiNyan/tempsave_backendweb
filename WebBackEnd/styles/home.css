@@ -9,6 +9,7 @@
 body{
     display: flex;
     flex-direction: column;
+    /* background-color: #f9fafb !important; */
 }
 
 main{
