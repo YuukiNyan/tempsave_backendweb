@@ -282,10 +282,10 @@ main{
     height: 60px;
     box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.2);
     border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
     display: flex;
     text-align: center;
     align-items: center;
