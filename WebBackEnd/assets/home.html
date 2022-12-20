@@ -110,7 +110,7 @@
                                     582,436 <span><i class='bx bxs-user'></i></span>
                                 </p>
                             </div>
-                            <img src="https://cdn-icons-png.flaticon.com/512/854/854929.png" alt="" width="60">
+                            <img src="https://cdn-icons-png.flaticon.com/512/854/854929.png" alt="">
                         </div>
                         <p class="compare">
                             <span class="color-increase">
@@ -129,7 +129,7 @@
                                     743,568 <span><i class='bx bxs-user'></i></span>
                                 </p>
                             </div>
-                            <img src="https://cdn-icons-png.flaticon.com/512/1150/1150626.png" alt="" width="60">
+                            <img src="https://cdn-icons-png.flaticon.com/512/1150/1150626.png" alt="">
                         </div>
                         <p class="compare">
                             <span class="color-decrease">
@@ -148,7 +148,7 @@
                                     212,348 <span><i class='bx bxs-user'></i></span>
                                 </p>
                             </div>
-                            <img src="https://cdn-icons-png.flaticon.com/512/3494/3494277.png" alt="" width="60">
+                            <img src="https://cdn-icons-png.flaticon.com/512/3494/3494277.png" alt="">
                         </div>
                         <p class="compare">
                             <span class="color-increase">
@@ -167,7 +167,7 @@
                                     582,436 <span><i class='bx bxs-user'></i></span>
                                 </p>
                             </div>
-                            <img src="https://cdn-icons-png.flaticon.com/512/854/854929.png" alt="" width="60">
+                            <img src="https://cdn-icons-png.flaticon.com/512/854/854929.png" alt="">
                         </div>
                         <p class="compare">
                             <span class="color-increase">
@@ -177,39 +177,62 @@
                         </p>
                     </div>
                 </div>
-                <div>
-                    <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                <div class="chart-analyze">
+                    <div class="chart-bar">
+                        <h2 class="chart-header">Site Visits</>
+                        <canvas id="myChart" style="max-width: 800px; display:block; position:static"></canvas>
+                    </div>
+                   
                     <script>
-                        const labels = [1,2,3,4,5,6,7];
+                        const labels = ["Thailand", "Vietnamese", "American", "France", "Philippines", "Japan", "Korean", "Indonesia"];
                         const data = {
-                        labels: labels,
-                        datasets: [{
-                            label: 'My First Dataset',
-                            data: [65, 59, 80, 81, 56, 55, 40],
-                            fill: false,
-                            borderColor: 'rgb(75, 192, 192)',
-                            tension: 0.1
-                        }]
-                        };
-                        var options = {
-                            scales: {
-                                xAxes: [{
-                                    gridLines: {
-                                        color: "rgba(0, 0, 0, 0)",
-                                    }
-                                }],
-                                yAxes: [{
-                                    gridLines: {
-                                        color: "rgba(0, 0, 0, 0)",
-                                    }   
-                                }]
-                            }
-                        }
+                            labels: labels,
+                            datasets: [{
+                              label: 'Top 8 visit countries',
+                              data: [65, 100, 80, 72, 56, 55, 70, 85],
+                              backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgba(255, 159, 64, 0.2)',
+                                'rgba(255, 205, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)',
+                                'rgba(54, 162, 235, 0.2)',
+                                'rgba(153, 102, 255, 0.2)',
+                                'rgba(201, 203, 207, 0.2)',
+                                'rgba(255, 203, 207, 0.2)',
+                              ],
+                              borderColor: [
+                                'rgb(255, 99, 132)',
+                                'rgb(255, 159, 64)',
+                                'rgb(255, 205, 86)',
+                                'rgb(75, 192, 192)',
+                                'rgb(54, 162, 235)',
+                                'rgb(153, 102, 255)',
+                                'rgb(201, 203, 207)'
+                              ],
+                              borderWidth: 1
+                            }]
+                          };
                         
                         new Chart("myChart", {
-                            type: 'line',
+                            type: 'bar',
                             data: data,
-                            options: options
+                            options: {
+                                scales: {
+                                    xAxes: [{
+                                        gridLines: {
+                                            display:false
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        ticks: {
+                                            beginAtZero: true
+                                        },
+                                        gridLines: {
+                                            display:false
+                                        }
+                                    }]
+                                }
+                              },
                         });
                         </script>
                 </div>
