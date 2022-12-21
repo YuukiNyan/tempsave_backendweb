@@ -3,8 +3,10 @@
     display: flex;
 }
 
-.content header h2{
+.content header h3{
     width: 100%;
+    color: rgb(108, 108, 108);
+    cursor: pointer;
 }
 
 .content header #add-user-btn,
@@ -116,6 +118,7 @@
 .user-list table tr{
     height: 50px;
 }
+
 .user-list table th, td{
     text-align: left;
     padding: 10px;
