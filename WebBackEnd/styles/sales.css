@@ -115,3 +115,56 @@
     width: 40px;
     height: 40px;
 }
+
+.chart-analyze{
+    margin-top: 40px;
+    box-shadow: 0px 0px 8px rgb(0, 0, 139, 0.2);
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.chart-line{
+    width: 600px;
+}
+
+.chart-line .chart-header{
+    padding-left: 30px;
+    width: 100%;
+}
+
+.chart-polar{
+    margin-top: 20px;
+}
+
+.chart-month ul{
+    list-style-type: none;
+    
+}
+
+.chart-analyze .detail{
+    display: flex;
+}
+
+.chart-month{
+    width: 340px;
+}
+
+.chart-month li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.chart-month a{
+    text-decoration: none;
+}
+
+.chart-month li a.active{
+    border-bottom: 1px solid #551A8B;
+}
