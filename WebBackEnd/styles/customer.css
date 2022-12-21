@@ -36,7 +36,7 @@
 
 .user-list{
     margin: 30px;
-    margin-top: 20px;
+    margin-top: 40px;
     padding: 10px;
     border-radius: 6px;
     -webkit-border-radius: 6px;
@@ -125,6 +125,28 @@
     border-bottom: 1px solid gray;
 }
 
+.user-list table span{
+    display: block;
+    color: white;
+    font-weight: bold;
+    width: 90px;
+    padding: 4px;
+    text-align: center;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    -ms-border-radius: 6px;
+    -o-border-radius: 6px;
+}
+
+.user-list table span.active{
+    background-color: rgb(126, 199, 132);
+}
+
+.user-list table span.inactive{
+    background-color: rgb(222, 125, 90);
+}
+
 .add-new-user-form{
     position: fixed;
     background-color: rgb(188, 188, 188,0.2);
@@ -156,14 +178,19 @@
 .main-form .form-header{
     padding: 30px;
     font-size: 22px;
+    transform: translateX(20px) translateY(10px);
+    -webkit-transform: translateX(20px) translateY(10px);
+    -moz-transform: translateX(20px) translateY(10px);
+    -ms-transform: translateX(20px) translateY(10px);
+    -o-transform: translateX(20px) translateY(10px);
 }
 
 .main-form .form-content{
+    width: 740px;
     display: flex;
     flex-wrap: wrap;
     padding: 30px;
     align-items: center;
-    margin: 0 auto;
     transform: translate(110px) translateY(20px);
     -webkit-transform: translate(110px) translateY(20px);
     -moz-transform: translate(110px) translateY(20px);
@@ -172,8 +199,8 @@
 }
 
 .main-form .form-content .input-field{
-    width: 300px;
-    margin-left: 20px;
+    width: 100%;
+    flex: 50%;
     margin-bottom: 20px;
 }
 
