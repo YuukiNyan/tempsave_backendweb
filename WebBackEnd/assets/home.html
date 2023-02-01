@@ -60,7 +60,428 @@
             </a>
         </nav>
         <div class="content-reponsive">
-            Content Reponsive
+            <!-- <header>
+                    <h2>Meow</h2>
+                    <div class="input-field">
+                        <input type="text" name="meow" id="meow" class="text-input" required="required">
+                        <span class="text-input-title" for="meow">Du lịch</span>
+                    </div>
+                </header> -->
+                <header>
+                    <h3>Dashboard</h3>
+                </header>
+                <div class="statics">
+                    <div class="summarycard">
+                        <div class="wrapper">
+                            <div class="card-content">
+                                <p class="card-title">
+                                    Total Visits
+                                </p>
+                                <p class="value">
+                                    582,436 <span><i class='bx bxs-user'></i></span>
+                                </p>
+                            </div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/854/854929.png" alt="">
+                        </div>
+                        <p class="compare">
+                            <span class="color-increase">
+                                4.68%
+                            </span>
+                            Since last month
+                        </p>
+                    </div>
+                    <div class="summarycard">
+                        <div class="wrapper">
+                            <div class="card-content">
+                                <p class="card-title">
+                                    Total Pages Views
+                                </p>
+                                <p class="value">
+                                    743,568 <span><i class='bx bxs-user'></i></span>
+                                </p>
+                            </div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/1150/1150626.png" alt="">
+                        </div>
+                        <p class="compare">
+                            <span class="color-decrease">
+                                7.53%
+                            </span>
+                            Since last month
+                        </p>
+                    </div>
+                    <div class="summarycard">
+                        <div class="wrapper">
+                            <div class="card-content">
+                                <p class="card-title">
+                                    Unique Visitor
+                                </p>
+                                <p class="value">
+                                    212,348 <span><i class='bx bxs-user'></i></span>
+                                </p>
+                            </div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/3494/3494277.png" alt="">
+                        </div>
+                        <p class="compare">
+                            <span class="color-increase">
+                                1.04%
+                            </span>
+                            Since last month
+                        </p>
+                    </div>
+                    <div class="summarycard">
+                        <div class="wrapper">
+                            <div class="card-content">
+                                <p class="card-title">
+                                    Total Visits
+                                </p>
+                                <p class="value">
+                                    582,436 <span><i class='bx bxs-user'></i></span>
+                                </p>
+                            </div>
+                            <img src="https://cdn-icons-png.flaticon.com/512/854/854929.png" alt="">
+                        </div>
+                        <p class="compare">
+                            <span class="color-increase">
+                                4.68%
+                            </span>
+                            Since last month
+                        </p>
+                    </div>
+                </div>
+                <div class="content-row-2">
+                    <div class="chart-analyze">
+                        <div class="chart-bar">
+                            <h2 class="chart-header">Top 8 visited countries</h2>
+                            <div class="chart-container">
+                                <canvas id="barChart1"></canvas>
+                            </div>
+                        </div>
+                        <div class="chart-pie">
+                            <canvas id="pieChart1"></canvas>
+                            <h2 class="chart-header">Visitors by Devices</h2>
+                        </div>
+    
+                        <script>
+                            const labels1 = ["Thailand", "Vietnamese", "American", "France", "Philippines", "Japan", "Korean", "Indonesia"];
+                            const data1 = {
+                                labels: labels1,
+                                datasets: [{
+                                  label: 'Top 8 visit countries',
+                                  data: [65, 100, 80, 72, 56, 55, 70, 85],
+                                  backgroundColor: [
+                                    'rgba(255, 99, 132, 0.2)',
+                                    'rgba(255, 159, 64, 0.2)',
+                                    'rgba(255, 205, 86, 0.2)',
+                                    'rgba(75, 192, 192, 0.2)',
+                                    'rgba(54, 162, 235, 0.2)',
+                                    'rgba(153, 102, 255, 0.2)',
+                                    'rgba(201, 203, 207, 0.2)',
+                                    'rgba(255, 203, 207, 0.2)',
+                                  ],
+                                  borderColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(255, 159, 64)',
+                                    'rgb(255, 205, 86)',
+                                    'rgb(75, 192, 192)',
+                                    'rgb(54, 162, 235)',
+                                    'rgb(153, 102, 255)',
+                                    'rgb(201, 203, 207)'
+                                  ],
+                                  borderWidth: 1
+                                }]
+                              };
+                            
+                            new Chart("barChart1", {
+                                type: 'bar',
+                                data: data1,
+                                options: {
+                                    scales: {
+                                        xAxes: [{
+                                            gridLines: {
+                                                display:false
+                                            }
+                                        }],
+                                        yAxes: [{
+                                            ticks: {
+                                                beginAtZero: true
+                                            },
+                                            gridLines: {
+                                                display:false
+                                            }
+                                        }]
+                                    }
+                                  },
+                            });
+                        </script>
+                        <script>
+                            const data_pie1 = {
+                                labels: [
+                                    'Desktops',
+                                    'Laptops',
+                                    'Tablets',
+                                    'Other'
+                                ],
+                                datasets: [{
+                                    label: 'Devices Accessed',
+                                    data: [300, 280, 100, 50],
+                                    backgroundColor: [
+                                    'rgb(255, 99, 132)',
+                                    'rgb(54, 162, 235)',
+                                    'rgb(255, 205, 86)'
+                                    ],
+                                    hoverOffset: 4
+                                }]
+                            };
+                            new Chart("pieChart1", {
+                                type: 'doughnut',
+                                data: data_pie1,
+                            });
+                        </script>
+                    </div>
+                    <div class="row-2-right">
+                        <div class="report-card">
+                            <h3>Create CRM Reports</h3>
+                            <div class="report-card-content">
+                                <p>
+                                    Outlines keep you and honest indulging honest.
+                                    <div>
+                                        <br>Read more <span><i class='bx bx-right-arrow-alt' ></i></span>
+                                    </div>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="total-sales">
+                            <div class="row-1">
+                                <header>Total Tours</header>
+                                <div class="time-stamps">
+                                    <div class="time-stamps-item active">Today</div>
+                                    <div class="time-stamps-item">This week</div>
+                                </div>
+                            </div>
+                            <div class="row-2">
+                                <div class="total-tours-value">532</div>
+                                <div class="line-chart-container">
+                                    <canvas id="total-tours-line-chart1"></canvas>
+                                </div>
+                            </div>
+                            <script>
+                                const labels_line1 = [
+                                    'Mon',
+                                    'Tue',
+                                    'Wed',
+                                    'Thu',
+                                    'Fri',
+                                    'Sat',
+                                    'Sun'
+                                ];
+                                const data_line1 = {
+                                labels: labels_line1,
+                                datasets: [{
+                                    data: [204, 345, 532, 308, 435, 345, 330],
+                                    fill: false,
+                                    borderColor: 'rgb(75, 192, 192)',
+                                    tension: 0.1
+                                }]
+                                };
+                                new Chart("total-tours-line-chart1", {
+                                    type: 'line',
+                                    data: data_line1,
+                                    options: {
+                                        scales: {
+                                            xAxes: [{
+                                                gridLines: {
+                                                    display:false
+                                                }
+                                            }],
+                                            yAxes: [{
+                                                ticks: {
+                                                    display: false
+                                                },
+                                                gridLines: {
+                                                    display:false
+                                                    
+                                                }
+                                            }],
+                                        },
+                                        legend: {
+                                                display: false
+                                            },
+                                    }
+                                });
+                            </script>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="content-row-3">
+                    <div class="transaction-row-3">
+                        <div class="transaction-row-1">
+                            <header>
+                                Transaction
+                            </header>
+                            <div>
+                                <i class='bx bx-dots-horizontal-rounded'></i>
+                            </div>
+                        </div>
+                        <div class="transaction-row-2">
+                            <div class="transaction-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055664.png" alt="Icon here">
+                                <div class="transContent">	
+                                    Electricity Bill
+                                </div>
+                                <div class="transValue interest">
+                                    + $ 1000.00
+                                </div>
+                            </div>
+                            <div class="transaction-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055664.png" alt="Icon here">
+                                <div class="transContent">	
+                                    Electricity Bill
+                                </div>
+                                <div class="transValue">
+                                    - $ 1000.00
+                                </div>
+                            </div>
+                            <div class="transaction-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055664.png" alt="Icon here">
+                                <div class="transContent">	
+                                    Electricity Bill
+                                </div>
+                                <div class="transValue interest">
+                                    + $ 1000.00
+                                </div>
+                            </div>
+                            <div class="transaction-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055664.png" alt="Icon here">
+                                <div class="transContent">	
+                                    Electricity Bill
+                                </div>
+                                <div class="transValue">
+                                    - $ 1000.00
+                                </div>
+                            </div>
+                            <div class="transaction-item">
+                                <img src="https://cdn-icons-png.flaticon.com/512/1055/1055664.png" alt="Icon here">
+                                <div class="transContent">	
+                                    Electricity Bill
+                                </div>
+                                <div class="transValue interest">
+                                    + $ 1000.00
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="news-row-3">
+                        <div class="news-row-3-1">
+                            <header>
+                                News & Update
+                            </header>
+                            <div>
+                                <i class='bx bx-dots-horizontal-rounded'></i>
+                            </div>
+                        </div>
+                        <div class="news-row-3-2">
+                            <div class="news-item">
+                                <div class="news-title">
+                                    50% off For Asian Tour
+                                </div>
+                                <div class="news-sum">
+                                    For the new year we have all discount for...
+                                </div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-title">
+                                    50% off For Asian Tour
+                                </div>
+                                <div class="news-sum">
+                                    For the new year we have all discount for...
+                                </div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-title">
+                                    50% off For Asian Tour
+                                </div>
+                                <div class="news-sum">
+                                    For the new year we have all discount for...
+                                </div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-title">
+                                    50% off For Asian Tour
+                                </div>
+                                <div class="news-sum">
+                                    For the new year we have all discount for...
+                                </div>
+                            </div>
+                            <div class="news-item">
+                                <div class="news-title">
+                                    50% off For Asian Tour
+                                </div>
+                                <div class="news-sum">
+                                    For the new year we have all discount for...
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="curr-activity-row-3">
+                        <div class="curr-activity-row-3-1">
+                            <header>
+                                Recent activity
+                            </header>
+                            <div>
+                                <i class='bx bx-dots-horizontal-rounded'></i>
+                            </div>
+                        </div>
+                        <div class="curr-activity-row-3-2">
+                            <ul>
+                                <li>
+                                    <div class="pink-circle">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                                <li>
+                                    <div class="pink-circle">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                                <li>
+                                    <div class="pink-circle">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                                <li>
+                                    <div class="pink-circle-trans">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                                <li>
+                                    <div class="pink-circle-trans">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                                <li>
+                                    <div class="pink-circle-trans">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
         </div>
         <div class="container">
             <div class="top-bar">
@@ -526,10 +947,61 @@
                         </div>
 
                     </div>
-                    <div class="monthly-plane-row-3">
-                        <header>
-                            Plan Info
-                        </header>
+                    <div class="curr-activity-row-3">
+                        <div class="curr-activity-row-3-1">
+                            <header>
+                                Recent activity
+                            </header>
+                            <div>
+                                <i class='bx bx-dots-horizontal-rounded'></i>
+                            </div>
+                        </div>
+                        <div class="curr-activity-row-3-2">
+                            <ul>
+                                <li>
+                                    <div class="pink-circle">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                                <li>
+                                    <div class="pink-circle">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                                <li>
+                                    <div class="pink-circle">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                                <li>
+                                    <div class="pink-circle-trans">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                                <li>
+                                    <div class="pink-circle-trans">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                                <li>
+                                    <div class="pink-circle-trans">
+
+                                    </div>
+                                    <p class="curr-activity-timer">5 min ago</p>
+                                    <p class="activity-sum">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque scelerisque</p>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 

@@ -612,7 +612,6 @@ main{
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center center;
-        overflow: hidden;
         border-radius: 10px;
         -webkit-border-radius: 10px;
         -moz-border-radius: 10px;
