@@ -7,14 +7,11 @@
     <title>Tourism Management</title>
     <link rel="stylesheet" href="../../styles/home_template.css">
     <link rel="stylesheet" href="../../styles/avatar_popup.css">
-    <link rel="stylesheet" href="../../styles/sales.css">
+    <link rel="stylesheet" href="make_card.css">
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="../js/hometemplate.js"></script>
-    <script
-        src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
-    </script>
     <link href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
@@ -23,7 +20,7 @@
             <a href="../home.html" class="logo">
                 
             </a>
-            <a href="../home.html" class="nav-item">
+            <a href="../home.html" class="nav-item active">
                 <i class='bx bxs-dashboard' ></i>
                 <span>Dashboard</span>
             </a>
@@ -39,10 +36,18 @@
                 <i class='bx bx-bus' ></i>
                 <span>Travel Tour</span>
             </a>
+            <a href="news.html" class="nav-item">
+                <i class='bx bx-news' ></i>
+                <span>News</span>
+            </a>
+            <a href="discount.html" class="nav-item">
+                <i class='bx bxs-discount' ></i>
+                <span>Discount</span>
+            </a>
             <div class="category">
                 <p>Report</span>
             </div>
-            <a href="sales.html" class="nav-item break active">
+            <a href="sales.html" class="nav-item break">
                 <i class='bx bx-cart-alt' ></i>
                 <span>Sales</span>
             </a>
@@ -51,6 +56,9 @@
                 <span>Traffic</span>
             </a>
         </nav>
+        <div class="content-reponsive">
+            Content Reponsive
+        </div>
         <div class="container">
             <div class="top-bar">
                 <div class="topbar-left">
@@ -123,10 +131,10 @@
                         </div>
                     </div>
                     <div class="user-info">
-                        <img src="../../images/home/profile.png" alt=""
+                        <img src="../images/home/profile.png" alt=""
                         class="user-avatar">
                         <div class="info-content">
-                            <p class="user-name">Trung</p>
+                            <p class="user-name">Meow</p>
                             <p class="user-position">Admin</p>
                         </div>
                         <div class="avatar-popup">
@@ -162,7 +170,7 @@
                     <p>Manage</p>
                     <div class="catagory-separator"></div>
                 </div>
-                <a href="customer.html" class="nav-item">
+                <a href="customer.html" class="nav-item active">
                     <i class='bx bxs-user'></i>
                     <span>Customer</span>
                 </a>
@@ -170,10 +178,18 @@
                     <i class='bx bx-bus' ></i>
                     <span>Travel Tour</span>
                 </a>
+                <a href="news.html" class="nav-item">
+                    <i class='bx bx-news' ></i>
+                    <span>News</span>
+                </a>
+                <a href="discount.html" class="nav-item">
+                    <i class='bx bxs-discount' ></i>
+                    <span>Discount</span>
+                </a>
                 <div class="category">
                     <p>Report</span>
                 </div>
-                <a href="#" class="nav-item break active">
+                <a href="sales.html" class="nav-item break">
                     <i class='bx bx-cart-alt' ></i>
                     <span>Sales</span>
                 </a>
@@ -183,276 +199,38 @@
                 </a>
             </nav>
             <div class="content">
-                <!-- <header>
-                    <h2>Meow</h2>
-                    <div class="input-field">
-                        <input type="text" name="meow" id="meow" class="text-input" required="required">
-                        <span class="text-input-title" for="meow">Du lịch</span>
+                <div class="traffic-ana-card">
+                    <div class="traffic-ana-card-item">
+                        <div class="header-icon">
+                            <i class='bx bxs-user-circle'></i>
+                            <i class="bx bx-dots-horizontal-rounded"></i>
+                        </div>
+                        <p class="card-value">3000</p>
+                        <p class="card-sumary">Accesses today</p>
                     </div>
-                </header> -->
-                <header>
-                    <h3>Dashboard</h3>
-                </header>
-                <div class="statics">
-                    <div class="summarycard">
-                        <div class="wrapper">
-                            <div class="card-content">
-                                <p class="card-title">
-                                    Total Visits
-                                </p>
-                                <p class="value">
-                                    582,436 <span><i class='bx bxs-user'></i></span>
-                                </p>
-                            </div>
-                            <img src="https://cdn-icons-png.flaticon.com/512/854/854929.png" alt="">
+                    <div class="traffic-ana-card-item">
+                        <div class="header-icon">
+                            <i class='bx bxs-user-circle'></i>
+                            <i class="bx bx-dots-horizontal-rounded"></i>
                         </div>
-                        <p class="compare">
-                            <span class="color-increase">
-                                4.68%
-                            </span>
-                            Since last month
-                        </p>
+                        <p class="card-value">3000</p>
+                        <p class="card-sumary">Accesses today</p>
                     </div>
-                    <div class="summarycard">
-                        <div class="wrapper">
-                            <div class="card-content">
-                                <p class="card-title">
-                                    Total Pages Views
-                                </p>
-                                <p class="value">
-                                    743,568 <span><i class='bx bxs-user'></i></span>
-                                </p>
-                            </div>
-                            <img src="https://cdn-icons-png.flaticon.com/512/1150/1150626.png" alt="">
+                    <div class="traffic-ana-card-item">
+                        <div class="header-icon">
+                            <i class='bx bxs-user-circle'></i>
+                            <i class="bx bx-dots-horizontal-rounded"></i>
                         </div>
-                        <p class="compare">
-                            <span class="color-decrease">
-                                7.53%
-                            </span>
-                            Since last month
-                        </p>
+                        <p class="card-value">3000</p>
+                        <p class="card-sumary">Accesses today</p>
                     </div>
-                    <div class="summarycard">
-                        <div class="wrapper">
-                            <div class="card-content">
-                                <p class="card-title">
-                                    Unique Visitor
-                                </p>
-                                <p class="value">
-                                    212,348 <span><i class='bx bxs-user'></i></span>
-                                </p>
-                            </div>
-                            <img src="https://cdn-icons-png.flaticon.com/512/3494/3494277.png" alt="">
+                    <div class="traffic-ana-card-item">
+                        <div class="header-icon">
+                            <i class='bx bxs-user-circle'></i>
+                            <i class="bx bx-dots-horizontal-rounded"></i>
                         </div>
-                        <p class="compare">
-                            <span class="color-increase">
-                                1.04%
-                            </span>
-                            Since last month
-                        </p>
-                    </div>
-                    <div class="summarycard">
-                        <div class="wrapper">
-                            <div class="card-content">
-                                <p class="card-title">
-                                    Total Visits
-                                </p>
-                                <p class="value">
-                                    582,436 <span><i class='bx bxs-user'></i></span>
-                                </p>
-                            </div>
-                            <img src="https://cdn-icons-png.flaticon.com/512/854/854929.png" alt="">
-                        </div>
-                        <p class="compare">
-                            <span class="color-increase">
-                                4.68%
-                            </span>
-                            Since last month
-                        </p>
-                    </div>
-                </div>
-                <div class="content-row-2">
-                    <div class="chart-analyze">
-                        <div class="chart-bar">
-                            <h2 class="chart-header">Tours made through months</h2>
-                            <div class="chart-container">
-                                <canvas id="barChart"></canvas>
-                            </div>
-                        </div>
-                        <div class="chart-pie">
-                            <canvas id="pieChart"></canvas>
-                            <h2 class="chart-header">Tours booked by Devices</h2>
-                        </div>
-    
-                        <script>
-                            const labels = ["6/2022", "7/2022", "8/2022", "9/2022", "10/2022", "11/2022", "12/2022", "1/2023"];
-                            const data = {
-                                labels: labels,
-                                datasets: [{
-                                  label: 'Top 8 visit countries',
-                                  data: [65, 100, 80, 72, 56, 55, 70, 85],
-                                  backgroundColor: [
-                                    'rgb(255, 219, 230, 1)',
-                                    'rgba(255, 159, 64, 0.2)',
-                                    'rgba(255, 205, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)',
-                                    'rgba(54, 162, 235, 0.2)',
-                                    'rgba(153, 102, 255, 0.2)',
-                                    'rgba(201, 203, 207, 0.2)',
-                                    'rgba(255, 203, 207, 0.2)',
-                                  ],
-                                  borderColor: [
-                                    'rgb(255, 104, 151)',
-                                  ],
-                                  borderWidth: 2
-                                }]
-                              };
-                            
-                            new Chart("barChart", {
-                                type: 'line',
-                                data: data,
-                                options: {
-                                    scales: {
-                                        xAxes: [{
-                                            gridLines: {
-                                                display:false
-                                            }
-                                        }],
-                                        yAxes: [{
-                                            ticks: {
-                                                beginAtZero: true
-                                            },
-                                            gridLines: {
-                                                display:false
-                                            }
-                                        }]
-                                    }
-                                  },
-                            });
-                        </script>
-                        <script>
-                            const data_pie = {
-                                labels: [
-                                    'Desktops',
-                                    'Laptops',
-                                    'Tablets',
-                                    'Other'
-                                ],
-                                datasets: [{
-                                    label: 'Devices Accessed',
-                                    data: [300, 240, 200, 250],
-                                    backgroundColor: [
-                                    'rgb(255, 99, 132)',
-                                    'rgb(54, 162, 235)',
-                                    'rgb(255, 220, 100)'
-                                    ],
-                                    hoverOffset: 4
-                                }]
-                            };
-                            new Chart("pieChart", {
-                                type: 'polarArea',
-                                data: data_pie,
-                            });
-                        </script>
-                    </div>
-                    <div class="row-2-right">
-                        <div class="sales-by-source">
-                            <h3 class="sales-by-source-header">
-                                Tours Booked From Social Source
-                            </h3>
-                            <div class="sales-by-source-item">
-                                <div class="item-info">
-                                    <i class='bx bxl-facebook-circle'></i>
-                                    <p class="item-name">Facebook</p>
-                                </div>
-                                <p class="item-value">200 Tours</p>
-                            </div>
-                            <div class="sales-by-source-item">
-                                <div class="item-info">
-                                    <i class='bx bxl-facebook-circle'></i>
-                                    <p class="item-name">Facebook</p>
-                                </div>
-                                <p class="item-value">200 Tours</p>
-                            </div>
-                            <div class="sales-by-source-item">
-                                <div class="item-info">
-                                    <i class='bx bxl-facebook-circle'></i>
-                                    <p class="item-name">Facebook</p>
-                                </div>
-                                <p class="item-value">200 Tours</p>
-                            </div>
-                            <div class="sales-by-source-item">
-                                <div class="item-info">
-                                    <i class='bx bxl-facebook-circle'></i>
-                                    <p class="item-name">Facebook</p>
-                                </div>
-                                <p class="item-value">200 Tours</p>
-                            </div>
-                            <a href="">View Details</a>
-                        </div>
-                    </div>
-                    
-                </div>
-                <div class="content-row-3">
-                    <div class="hot-tour">
-                        <h3 class="hot-tour-header">Hot Tours Recent</h3>
-                        <div class="hot-tour-table">
-                            <div class="hot-tour-table-item first-row">
-                                <p>#</p>
-                                <p>Tour Name</p>
-                                <p>Tour ID</p>
-                                <p>Price</p>
-                                <p>Sold</p>
-                            </div>
-                            <div class="hot-tour-table-item">
-                                <p>1</p>
-                                <p>Japan</p>
-                                <p>jp001</p>
-                                <p>$50</p>
-                                <p>100</p>
-                            </div>
-                            <div class="hot-tour-table-item">
-                                <p>2</p>
-                                <p>Japan</p>
-                                <p>jp001</p>
-                                <p>$50</p>
-                                <p>100</p>
-                            </div>
-                            <div class="hot-tour-table-item">
-                                <p>3</p>
-                                <p>Japan</p>
-                                <p>jp001</p>
-                                <p>$50</p>
-                                <p>100</p>
-                            </div>
-                            <div class="hot-tour-table-item">
-                                <p>4</p>
-                                <p>Japan</p>
-                                <p>jp001</p>
-                                <p>$50</p>
-                                <p>100</p>
-                            </div>
-                            <div class="hot-tour-table-item">
-                                <p>5</p>
-                                <p>Japan</p>
-                                <p>jp001</p>
-                                <p>$50</p>
-                                <p>100</p>
-                            </div>
-                            
-                        </div>
-                        <button>View Details</button>
-                    </div>
-                    <div class="report-card">
-                        <h3>Create CRM Reports</h3>
-                        <div class="report-card-content">
-                            <p>
-                                Outlines keep you and honest indulging honest.
-                                <div>
-                                    <br>Read more <span><i class='bx bx-right-arrow-alt' ></i></span>
-                                </div>
-                            </p>
-                        </div>
+                        <p class="card-value">3000</p>
+                        <p class="card-sumary">Accesses today</p>
                     </div>
                 </div>
             </div>

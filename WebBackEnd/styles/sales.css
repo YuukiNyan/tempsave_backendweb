@@ -117,12 +117,12 @@
     border: 1px solid rgba(0, 0, 0, 0.15);
     padding: 12px;
     padding-top: 16px;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    box-shadow: 0 0 4px rgb(128 128 128 / 40%);
     width: 70%;
     min-width: 1090px;
 }
@@ -199,6 +199,7 @@
 
 .content-row-2{
     display: flex;
+    column-gap: 20px;
 }
 
 .report-card{
@@ -216,6 +217,8 @@
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.15);
     padding-top: 40px;
     padding-right: 36px;
+    max-width: 400px;
+    max-height: 200px;
 }
 
 .report-card h3{
@@ -657,4 +660,72 @@
 
 .hot-tour-table{
     overflow-y: scroll;
+}
+
+@media screen and (max-width: 1100px){
+    .content{
+        padding-left: 2px;
+    }
+}
+
+.sales-by-source{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    box-shadow: 0 0 4px rgba(128, 128, 128, 0.4);
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
+}
+
+.sales-by-source .sales-by-source-item{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #e6e6f2;
+}
+
+.sales-by-source .sales-by-source-item .item-info{
+    display: flex;
+    align-items: center;
+}
+
+.sales-by-source .sales-by-source-header{
+    border-bottom: 1px solid #e6e6f2;
+    padding: 10px;
+    padding-top: 0;
+    color: #3d405c;
+}
+
+.sales-by-source .sales-by-source-item .item-info .item-name{
+    font-size: 16px;
+    color: #71748d;
+    font-weight: bold;
+    margin-left: 4px;
+}
+
+.sales-by-source .sales-by-source-item .item-info .item-value{
+    color: #3d405c !important;
+    font-weight: bold;
+}
+
+.sales-by-source a{
+    color: #5969ff !important;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px ;
+    display: block;
+    text-align: center;
+    padding: 8px;
+    background-color: #f6f6ff;
+    height: 40px;
+    line-height: 28px;
+}
+
+.sales-by-source .sales-by-source-item .item-info i{
+    font-size: 40px;
+    color: #0d6efd;
 }
