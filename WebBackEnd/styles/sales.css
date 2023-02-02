@@ -1,3 +1,7 @@
+html{
+    scroll-behavior: smooth;
+}
+
 .content{
     padding: 30px 50px;
     height: 100%;
@@ -114,16 +118,16 @@
 
 .chart-analyze{
     display: flex;
-    border: 1px solid rgba(0, 0, 0, 0.15);
+    border: 0 0 4px rgb(128 128 128 / 40%);
     padding: 12px;
     padding-top: 16px;
-    border-radius: 4px;
-    -webkit-border-radius: 4px;
-    -moz-border-radius: 4px;
-    -ms-border-radius: 4px;
-    -o-border-radius: 4px;
+    border-radius: 2px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    -o-border-radius: 2px;
     box-shadow: 0 0 4px rgb(128 128 128 / 40%);
-    width: 70%;
+    width: fit-content;
     min-width: 1090px;
 }
 
@@ -187,8 +191,8 @@
 }
 
 @media screen and (max-width: 1890px){
-    .content-row-2{
-        display: block !important;
+    .content-row-2 *{
+        
     }
     .report-card{
         max-width: 460px;
@@ -197,9 +201,37 @@
     }
 }
 
+@media screen and (max-width: 860px){
+    .content-row-2{
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+    html::-webkit-scrollbar {
+        width: 4px;  
+          background-color: #ffffff;
+      }
+      
+      /* Track */
+    html::-webkit-scrollbar-track {
+        
+        border-radius: 10px;
+        
+      }
+       
+      /* Handle */
+    html::-webkit-scrollbar-thumb {
+        background-color: #9999992a;
+        border-radius: 8px;
+    }
+}
+
 .content-row-2{
     display: flex;
     column-gap: 20px;
+}
+
+.content-row-2 > div{
+    flex: 1 1 auto;
 }
 
 .report-card{
@@ -649,6 +681,10 @@
     cursor: pointer;
 }
 
+.content-row-3 .hot-tour button a{
+    text-decoration: none;
+}
+
 .content-row-3 .hot-tour button:hover{
     background-color: #f0f0f8;
     transition: all ease 0.3s;
@@ -678,6 +714,7 @@
     -moz-border-radius: 2px;
     -ms-border-radius: 2px;
     -o-border-radius: 2px;
+    height: 100%;
 }
 
 .sales-by-source .sales-by-source-item{
@@ -704,7 +741,7 @@
     font-size: 16px;
     color: #71748d;
     font-weight: bold;
-    margin-left: 4px;
+    margin-left: 6px;
 }
 
 .sales-by-source .sales-by-source-item .item-info .item-value{
@@ -723,9 +760,23 @@
     background-color: #f6f6ff;
     height: 40px;
     line-height: 28px;
+    margin-top: 20px;
 }
 
 .sales-by-source .sales-by-source-item .item-info i{
     font-size: 40px;
     color: #0d6efd;
+}
+
+.sales-by-source .sales-by-source-item .item-info img{
+    width: 36px;
+    height: 36px;
+}
+
+.btn-container{
+    /* cursor: pointer; */
+}
+
+.hot-tour-table-item.first-row p{
+    cursor: pointer;
 }

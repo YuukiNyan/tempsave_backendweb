@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/transition-style">
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="../js/hometemplate.js"></script>
+    <script src="../../js/hometemplate.js"></script>
     <script
         src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
     </script>
@@ -52,7 +52,7 @@
             </a>
         </nav>
         <div class="container">
-            <div class="top-bar">
+            <div class="top-bar" id="top">
                 <div class="topbar-left">
                     <div class="nav-opener">
                         <i class='bx bx-menu'></i>
@@ -274,14 +274,14 @@
                 <div class="content-row-2">
                     <div class="chart-analyze">
                         <div class="chart-bar">
-                            <h2 class="chart-header">Tours made through months</h2>
+                            <h2 class="chart-header">Tours Made Through Months</h2>
                             <div class="chart-container">
                                 <canvas id="barChart"></canvas>
                             </div>
                         </div>
                         <div class="chart-pie">
                             <canvas id="pieChart"></canvas>
-                            <h2 class="chart-header">Tours booked by Devices</h2>
+                            <h2 class="chart-header">Tours Booked By Devices</h2>
                         </div>
     
                         <script>
@@ -362,33 +362,35 @@
                             </h3>
                             <div class="sales-by-source-item">
                                 <div class="item-info">
-                                    <i class='bx bxl-facebook-circle'></i>
+                                    <img src="https://cdn-icons-png.flaticon.com/512/5968/5968764.png" alt="">
                                     <p class="item-name">Facebook</p>
                                 </div>
                                 <p class="item-value">200 Tours</p>
                             </div>
                             <div class="sales-by-source-item">
                                 <div class="item-info">
-                                    <i class='bx bxl-facebook-circle'></i>
-                                    <p class="item-name">Facebook</p>
+                                    <img src="../../images/home/instagram.png" alt="">
+                                    <p class="item-name">Instagram</p>
                                 </div>
                                 <p class="item-value">200 Tours</p>
                             </div>
                             <div class="sales-by-source-item">
                                 <div class="item-info">
-                                    <i class='bx bxl-facebook-circle'></i>
-                                    <p class="item-name">Facebook</p>
+                                    <img src="https://classic.vn/wp-content/uploads/2022/07/zalo-icon.png" alt="">
+                                    <p class="item-name">Zalo</p>
                                 </div>
                                 <p class="item-value">200 Tours</p>
                             </div>
                             <div class="sales-by-source-item">
                                 <div class="item-info">
-                                    <i class='bx bxl-facebook-circle'></i>
-                                    <p class="item-name">Facebook</p>
+                                    <img src="../../images/home/tik-tok.png" alt="">
+                                    <p class="item-name">Tik Tok</p>
                                 </div>
                                 <p class="item-value">200 Tours</p>
                             </div>
-                            <a href="">View Details</a>
+                            <div class="btn-container">
+                                <a href="#top">View Details</a>
+                            </div>
                         </div>
                     </div>
                     
@@ -441,7 +443,7 @@
                             </div>
                             
                         </div>
-                        <button>View Details</button>
+                        <button><a href="#top">View Details</a></button>
                     </div>
                     <div class="report-card">
                         <h3>Create CRM Reports</h3>
