@@ -627,6 +627,9 @@ text-align: center;
     .user-list table td:nth-child(6), th:nth-child(6){
         display: none;
     }
+    .row-1 > div{
+        margin: 20px auto !important;
+    }
 }
 
 @media only screen and (max-width: 980px) {
@@ -839,4 +842,14 @@ text-align: center;
 
 .invite-user.add-discount{
     margin-left: 0;
+}
+
+@media screen and (max-width: 520px){
+    #search-user-txt{
+        width: 150px !important;
+    }
+}
+
+.chart-analyze{
+    overflow-x: scroll;
 }

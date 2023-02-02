@@ -620,11 +620,15 @@ content: counter(percentage) '%';
     .user-list table td:nth-child(3), th:nth-child(3){
         display: none;
     }
+
 }
 
 @media only screen and (max-width: 1100px) {
     .user-list table td:nth-child(6), th:nth-child(6){
         display: none;
+    }
+    .row-1 > div{
+        margin: 20px auto !important;
     }
 }
 
@@ -640,4 +644,13 @@ content: counter(percentage) '%';
     }
 }
 
+@media screen and (max-width: 520px){
+    #search-user-txt{
+        width: 150px !important;
+    }
+}
+
+table th{
+    cursor: pointer;
+}
 
